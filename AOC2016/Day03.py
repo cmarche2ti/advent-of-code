@@ -1755,12 +1755,18 @@ def triangle(l):
 
 count = 0
 
-for value in data_list:
-    if "" in value:
-        value.remove("")
-    if " " in value:
-        value.remove(" ")
+print(data_list)
+# for value in data_list:
+#     if "" in value:
+#         value.remove("")
+#     if " " in value:
+#         value.remove(" ")
+#     if triangle(value) == "Triangle":
+#         count += 1
+
+
+for i in range(2, len(data_list)):
+
     if triangle(value) == "Triangle":
         count += 1
-
 print(count)

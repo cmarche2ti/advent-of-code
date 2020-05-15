@@ -21,4 +21,3 @@ for wire in wires:
                 move = int(value.split("U")[1])
                 y += move
             wire_dict[item].append((x, y))
-print(wire_dict)
