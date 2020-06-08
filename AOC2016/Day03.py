@@ -1753,20 +1753,26 @@ def triangle(l):
         return "Not a Triangle"
 
 
+test_list = [["330", "143", "338"], ["769", "547", " 83"], ["930", "625", "317"]]
+
 count = 0
 
-print(data_list)
-# for value in data_list:
-#     if "" in value:
-#         value.remove("")
-#     if " " in value:
-#         value.remove(" ")
+
+# part 1 solution
+for value in data_list:
+    if "" in value:
+        value.remove("")
+    if " " in value:
+        value.remove(" ")
 #     if triangle(value) == "Triangle":
 #         count += 1
 
+for i in range(2, len(data_list), 3):
+    for j in range(len(data_list[i])):
+        possible_triangle = [data_list[i][j], data_list[i - 1][j], data_list[i - 2][j]]
+        print(possible_triangle, triangle(possible_triangle))
+        if triangle(possible_triangle) == "Triangle":
+            count += 1
 
-for i in range(2, len(data_list)):
 
-    if triangle(value) == "Triangle":
-        count += 1
 print(count)
