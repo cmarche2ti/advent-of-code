@@ -7,7 +7,8 @@ with open("./Data/Day06-Data.txt", "r") as reader:
         directions.append(line[:-1])
 
 
-def toggle(light):
+def toggle(start, end):
+
     if light[2] == 0:
         light[2] = 1
     else:
@@ -20,11 +21,12 @@ for i in range(1000):
 
 for d in directions:
     d = d.split(" ")
-    print(d)
-    start = 
+    start = d[1].split(",")
+    end = d[2].split(",")
+    print(d, start, end)
     # turn lights in range on
     if d[0] == "on":
-        
+        pass
     # turn lights in range off
     elif d[0] == "off":
         pass
