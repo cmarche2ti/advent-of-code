@@ -1021,20 +1021,37 @@ puzzle = """-7
 -73422"""
 puzzle = puzzle.split("\n")
 total = 0
-freq_list = set([0])
+freq_list = [0]
+duplicate = True
+dup_list = []
+
+# part 1
+# for num in puzzle:
+#     total += int(num)
+#     freq_list.append(total)
+# print(total)
+
+while total not in freq_list:
+    for val in puzzle:
+        total += int(val)
+        if total in freq_list:
+            dup_list.append(total)
+            duplicate == False
+        freq_list.append(total)
+
+print(dup_list)
+
+
+# for i in range(len(freq_list)):
+# if freq_list[i] in freq_list[i + 1 :]:
+# print(freq_list[i])
 
 # for num in puzzle:
 #     total += int(num)
-#     freq_list.add(num)
-# print(total)
-duplicate = True
-# while duplicate:
-for num in puzzle:
-    total += int(num)
-    if total in freq_list:
-        frequency_twice = total
-        break
-    else:
-        freq_list.add(total)
-print(freq_list)
-# print(frequency_twice)
+#     if total in freq_list:
+#         frequency_twice = total
+#         break
+#     else:
+#         freq_list.add(total)
+# print(freq_list)
+# # print(frequency_twice)
